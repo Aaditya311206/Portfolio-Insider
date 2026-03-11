@@ -4,17 +4,17 @@ function Projects(){
 
 const projects=[
 {
-title:"Dynamic Island Android",
-desc:"Android app inspired by iPhone Dynamic Island UI."
+title:"Stock Predict",
+desc:"You can predict the price of a stock and win prizes."
 },
 {
-title:"Sorting Visualizer",
-desc:"Visualizes sorting algorithms."
+title:"DistraX",
+desc:"A distraction-blocking app to help you stay focused."
 },
 {
-title:"Bookstore Database",
-desc:"Database system for online bookstore."
-}
+title:"Flappy Modi",
+desc:"A fun twist on the classic Flappy Bird game."
+},
 ]
 
 return(

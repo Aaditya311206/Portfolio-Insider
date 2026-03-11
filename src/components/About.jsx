@@ -23,9 +23,10 @@ transition={{duration:0.8}}
 I am a Computer Science student passionate about building web
 applications and solving algorithmic problems. I enjoy working
 with React, JavaScript and exploring new technologies.
-
 </motion.p>
-
+<button className="Insider"><a href="https://insider-website.vercel.app/" target="_blank" rel="noopener noreferrer">
+  Something for the start.
+</a></button>
 </section>
 
 )

@@ -75,11 +75,15 @@ background:#38bdf8;
 color:black;
 box-shadow:0 0 20px #38bdf8;
 }
+.Insider{
+background:#38bdf8;
+color:black;
+box-shadow:0 0 20px #38bdf8;
+}
 
 .secondary{
-background:transparent;
-border:1px solid white;
-color:white;
+background:#38bdf8;
+color:black;
 }
 
 /* sections */

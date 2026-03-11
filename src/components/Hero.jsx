@@ -15,8 +15,8 @@ transition={{duration:1}}
 
 <Typewriter
 words={[
-"Hi I'm Aadi 👋",
-"React Developer",
+"Hi I'm Aaditya 👋",
+"Second Year",
 "Computer Science Student"
 ]}
 loop
