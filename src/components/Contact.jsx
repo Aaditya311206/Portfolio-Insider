@@ -1,22 +1,52 @@
-function Contact() {
-  return (
-    <section id="contact" className="p-20 bg-gray-800 text-center">
+import { motion } from "framer-motion"
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
 
-      <h2 className="text-3xl font-bold mb-6">Contact</h2>
+function Contact(){
 
-      <p className="text-gray-300 mb-4">
-        Feel free to reach out!
-      </p>
+return(
 
-      <p>Email: aadi@email.com</p>
+<section id="contact">
 
-      <div className="mt-4 flex justify-center gap-6">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
-      </div>
+<h2>Contact</h2>
 
-    </section>
-  )
+<motion.div
+className="contact-card"
+initial={{opacity:0,y:50}}
+whileInView={{opacity:1,y:0}}
+transition={{duration:0.6}}
+whileHover={{scale:1.05}}
+>
+
+<div className="contact-icon">
+<FaEnvelope/>
+</div>
+
+<h3>Aadi</h3>
+
+<p>Second Year Computer Science Student </p>
+
+<div className="contact-links">
+
+<a href="mailto:aadi@email.com">
+<FaEnvelope/> Email
+</a>
+
+<a href="https://github.com">
+<FaGithub/> GitHub
+</a>
+
+<a href="https://linkedin.com">
+<FaLinkedin/> LinkedIn
+</a>
+
+</div>
+
+</motion.div>
+
+</section>
+
+)
+
 }
 
 export default Contact

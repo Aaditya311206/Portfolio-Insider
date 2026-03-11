@@ -1,17 +1,35 @@
-function About() {
-  return (
-    <section id="about" className="p-20 text-center">
+import { motion } from "framer-motion"
 
-      <h2 className="text-3xl font-bold mb-6">About Me</h2>
+function About(){
 
-      <p className="max-w-2xl mx-auto text-gray-300">
-        I am a Computer Science student passionate about building web
-        applications and solving algorithmic problems. I enjoy working
-        with React, JavaScript and exploring new technologies.
-      </p>
+return(
 
-    </section>
-  )
+<section id="about">
+
+<motion.h2
+initial={{opacity:0}}
+whileInView={{opacity:1}}
+transition={{duration:0.8}}
+>
+About Me
+</motion.h2>
+
+<motion.p
+initial={{opacity:0,y:40}}
+whileInView={{opacity:1,y:0}}
+transition={{duration:0.8}}
+>
+
+I am a Computer Science student passionate about building web
+applications and solving algorithmic problems. I enjoy working
+with React, JavaScript and exploring new technologies.
+
+</motion.p>
+
+</section>
+
+)
+
 }
 
 export default About

@@ -1,37 +1,49 @@
 import { motion } from "framer-motion"
+import { Typewriter } from "react-simple-typewriter"
 
-function Hero() {
-  return (
-    <section className="hero">
+function Hero(){
 
-      <motion.h1
-        initial={{ opacity: 0, y: -60 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        Hi I'm <span>Aadi</span> 👋
-      </motion.h1>
+return(
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
-        Computer Science Student | React Developer
-      </motion.p>
+<section className="hero">
 
-      <motion.div
-        className="buttons"
-        initial={{ opacity: 0, y: 60 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1 }}
-      >
-        <button className="primary">View Projects</button>
-        <button className="secondary">Contact</button>
-      </motion.div>
+<motion.h1
+initial={{opacity:0,y:-60}}
+animate={{opacity:1,y:0}}
+transition={{duration:1}}
+>
 
-    </section>
-  )
+<Typewriter
+words={[
+"Hi I'm Aadi 👋",
+"React Developer",
+"Computer Science Student"
+]}
+loop
+cursor
+cursorStyle="|"
+typeSpeed={70}
+deleteSpeed={40}
+/>
+
+</motion.h1>
+
+<motion.div
+className="buttons"
+initial={{opacity:0,y:60}}
+animate={{opacity:1,y:0}}
+transition={{delay:1}}
+>
+
+<button className="primary"><a href="#projects">View Projects</a></button>
+<button className="secondary"><a href="#contact">Contact</a></button>
+
+</motion.div>
+
+</section>
+
+)
+
 }
 
 export default Hero

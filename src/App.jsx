@@ -4,18 +4,30 @@ import About from "./components/About"
 import Skills from "./components/Skills"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
+import { motion, useScroll } from "framer-motion"
 
 function App() {
-  return (
-    <div className="bg-gray-900 text-white">
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-    </div>
-  )
+
+const {scrollYProgress} = useScroll()
+
+return (
+<>
+
+<motion.div
+className="scroll-bar"
+style={{scaleY:scrollYProgress}}
+/>
+
+<Navbar/>
+<Hero/>
+<About/>
+<Skills/>
+<Projects/>
+<Contact/>
+
+</>
+)
+
 }
 
 export default App

@@ -1,38 +1,42 @@
 import { motion } from "framer-motion"
+import { FaReact, FaJs, FaHtml5, FaCss3Alt, FaJava, FaPython } from "react-icons/fa"
 
 function Skills(){
 
 const skills=[
-"JavaScript",
-"React",
-"HTML",
-"CSS",
-"Git",
-"Java",
-"Python"
+{icon:<FaReact/>,name:"React"},
+{icon:<FaJs/>,name:"JavaScript"},
+{icon:<FaHtml5/>,name:"HTML"},
+{icon:<FaCss3Alt/>,name:"CSS"},
+{icon:<FaJava/>,name:"Java"},
+{icon:<FaPython/>,name:"Python"}
 ]
 
 return(
 
-<section>
+<section id="skills">
 
 <h2>Skills</h2>
 
 <div className="skills">
 
 {skills.map((skill,index)=>(
+
 <motion.div
 key={index}
 className="skill-card"
-whileHover={{ scale:1.2 }}
-whileTap={{ scale:0.9 }}
-initial={{ opacity:0, y:40 }}
-whileInView={{ opacity:1, y:0 }}
-transition={{ duration:0.5 }}
-viewport={{ once:true }}
+initial={{opacity:0,y:40}}
+whileInView={{opacity:1,y:0}}
+whileHover={{scale:1.2}}
+transition={{duration:0.5}}
 >
-{skill}
+
+<div className="icon">{skill.icon}</div>
+
+<p>{skill.name}</p>
+
 </motion.div>
+
 ))}
 
 </div>

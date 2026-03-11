@@ -1,15 +1,33 @@
+import { FaUser, FaBriefcase, FaEnvelope } from "react-icons/fa"
+import { AiOutlineHome } from "react-icons/ai"
+
 function Navbar() {
   return (
-    <nav className="flex justify-between p-5 bg-gray-800">
-      <h1 className="text-xl font-bold">Portfolio</h1>
 
-      <ul className="flex gap-6">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div className="floating-navbar">
+
+      <a href="#home" className="nav-circle">
+        <AiOutlineHome />
+        <span>Home</span>
+      </a>
+
+      <a href="#about" className="nav-circle">
+        <FaUser />
+        <span>About</span>
+      </a>
+
+      <a href="#projects" className="nav-circle">
+        <FaBriefcase />
+        <span>Projects</span>
+      </a>
+
+      <a href="#contact" className="nav-circle">
+        <FaEnvelope />
+        <span>Contact</span>
+      </a>
+
+    </div>
+
   )
 }
 
